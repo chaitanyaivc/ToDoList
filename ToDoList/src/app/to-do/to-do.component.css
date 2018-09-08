@@ -1,0 +1,18 @@
+.strikeThrough {
+    color: red;
+    text-decoration: line-through;
+}
+
+.fixed-width-100 {
+    width: 74.5% !important;
+}
+
+.btn-override {
+    margin-left: 5px;
+}
+
+.todo-name {
+    min-width: 100%;
+    float: left;
+    cursor: pointer;
+}

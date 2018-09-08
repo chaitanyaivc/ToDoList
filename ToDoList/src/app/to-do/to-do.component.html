@@ -1,0 +1,18 @@
+<div class="container main-panel">
+  <div class="row">
+    <div class="panel form-group form-inline">
+      <input type="text" [(ngModel)]="item" placeholder="Enter any item" class="form-control">
+      <button (click)="addItem()" class="btn btn-success btn-override">Add Item</button>
+      <button (click)="deleteAllDone()" class="btn btn-danger btn-override">Delete All That are done</button>
+    </div>
+  </div>
+  <div class="row items-to-center">
+    <table>
+      <tr *ngFor="let item of items" style="list-style-type: none;">
+        <td> &#8608;</td>
+        <td class="fixed-width-100"><span (click)="updateItem(item)" class="todo-name fade-out" [ngClass]="{'strikeThrough': item.isDone}">{{ item.name }}</span></td>
+        <td><button (click)="deleteItem(item)" class="todo-delete btn btn-danger btn-override">Delete</button></td>
+      </tr>
+    </table>
+  </div>
+</div>
